@@ -18,7 +18,7 @@ parser.add_argument('-caffemodel', type=str,
                    help='name of the .caffemodel file')
 parser.add_argument('-store_path', type=str, default='',
                    help='path to the folder where the Keras model will be stored (default: -load_path).')
-parser.add_argument('-network_type', type=str, default='Sequential',
+parser.add_argument('-network_type', type=str, default='Graph',
                    help='Type of network. Sequential / Graph (default is Sequential)')
 parser.add_argument('-debug', action='store_true', default=0,
 		   help='use debug mode')

@@ -7,9 +7,10 @@ def test_convertGoogleNet():
     store_path = 'keras/caffe/models'
     prototxt = 'train_val_for_keras.prototxt'
     caffemodel = 'bvlc_googlenet.caffemodel'
+    network_type='Graph'
 
     # Convert model from caffe to keras
-    model = convert.caffe_to_keras(load_path+'/'+prototxt, load_path+'/'+caffemodel, debug=False)
+    model = convert.caffe_to_keras(load_path+'/'+prototxt, load_path+'/'+caffemodel, network_type, debug=False)
     assert(model.__class__.__name__ == 'Graph')
 
     # Save converted model structure
@@ -20,5 +21,5 @@ def test_convertGoogleNet():
 
 
 if __name__ == '__main__':
-    pytest.main([__file__]) 
+    pytest.main([__file__])
     # test_convertGoogleNet()
